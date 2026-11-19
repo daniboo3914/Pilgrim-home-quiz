@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Test your colonial-era house knowledge | Inman</title>
+<style>html,body{margin:0;padding:0;background:#fff}body{padding:8px}</style>
+</head>
+<body>
+<!-- Inman quiz: Test your colonial-era house knowledge
+     Paste everything below into an HTML/embed block. All styles are scoped to .iq so they won't affect the rest of the page.
+     Brand colors are set as variables at the top of the <style> block. -->
+<div class="iq" id="iq-colonial">
+<style>
+.iq{
+  --iq-navy:#161A48;     /* Inman dark blue: text, headlines, buttons */
+  --iq-blue:#0A84FF;     /* Inman bright blue: progress, correct answers, score */
+  --iq-red:#FF0A0A;      /* Inman red: top accent, wrong answers */
+  --iq-ink:#161A48;
+  --iq-muted:#5A5E7A;
+  --iq-line:#D6D9E6;
+  --iq-tint:#F2F6FD;
+  --iq-right:#0A84FF;
+  --iq-right-bg:#EAF3FF;
+  --iq-wrong:#FF0A0A;
+  --iq-wrong-bg:#FFF1F1;
+  font-family:"Helvetica Neue",Helvetica,Arial,sans-serif;
+  color:var(--iq-ink);
+  max-width:680px;
+  margin:0 auto;
+  border-top:6px solid var(--iq-navy);
+  background:#fff;
+  box-sizing:border-box;
+  line-height:1.5;
+}
+.iq *,.iq *::before,.iq *::after{box-sizing:inherit}
+.iq-head{padding:24px 24px 4px}
+.iq-title{font-family:Georgia,"Times New Roman",serif;font-size:28px;line-height:1.2;font-weight:700;margin:0 0 6px}
+.iq-dek{margin:0;color:var(--iq-muted);font-size:16px}
+.iq-body{padding:16px 24px 28px}
+.iq-meta{display:flex;align-items:center;gap:12px;margin:0 0 14px;font-size:14px;color:var(--iq-muted)}
+.iq-bar{flex:1;height:4px;background:var(--iq-line);border-radius:2px;overflow:hidden}
+.iq-bar span{display:block;height:100%;background:var(--iq-blue);transition:width .3s ease}
+.iq-q{font-family:Georgia,"Times New Roman",serif;font-size:23px;line-height:1.3;font-weight:700;margin:0 0 16px}
+.iq-opts{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.iq-opt{
+  width:100%;text-align:left;font:inherit;font-size:16px;color:var(--iq-ink);
+  background:#fff;border:2px solid var(--iq-line);border-radius:6px;
+  padding:13px 44px 13px 16px;cursor:pointer;position:relative;
+  transition:border-color .15s ease,background .15s ease;
+}
+.iq-opt:hover:not(:disabled){border-color:var(--iq-blue)}
+.iq-opt:focus-visible,.iq-btn:focus-visible{outline:3px solid var(--iq-blue);outline-offset:2px}
+.iq-opt:disabled{cursor:default}
+.iq-opt.is-right{border-color:var(--iq-right);background:var(--iq-right-bg)}
+.iq-opt.is-wrong{border-color:var(--iq-wrong);background:var(--iq-wrong-bg)}
+.iq-opt.is-wrong .iq-mark{color:var(--iq-wrong)}
+.iq-opt.is-dim{opacity:.55}
+.iq-opt .iq-mark{position:absolute;right:14px;top:50%;transform:translateY(-50%);font-weight:700;font-size:18px}
+.iq-opt.is-right .iq-mark{color:var(--iq-right)}
+.iq-feedback{margin-top:16px;padding:14px 16px;background:var(--iq-tint);border-left:4px solid var(--iq-blue);font-size:16px}
+.iq-feedback strong{display:block;margin-bottom:2px}
+.iq-actions{margin-top:18px}
+.iq-btn{
+  font:inherit;font-size:16px;font-weight:700;color:#fff;background:var(--iq-navy);
+  border:0;border-radius:6px;padding:12px 22px;cursor:pointer;
+}
+.iq-btn:hover{background:var(--iq-blue)}
+.iq-result{text-align:center;padding:12px 0 4px}
+.iq-score{font-family:Georgia,"Times New Roman",serif;font-size:64px;line-height:1;font-weight:700;color:var(--iq-blue);margin:0}
+.iq-score small{font-size:28px;color:var(--iq-ink)}
+.iq-verdict{font-family:Georgia,"Times New Roman",serif;font-size:24px;font-weight:700;margin:14px 0 6px}
+.iq-msg{margin:0 auto 20px;max-width:46ch;color:var(--iq-ink)}
+.iq [hidden]{display:none !important}
+@media (max-width:480px){
+  .iq-head{padding:20px 16px 4px}.iq-body{padding:12px 16px 24px}
+  .iq-title{font-size:24px}.iq-q{font-size:20px}
+}
+@media (prefers-reduced-motion:reduce){.iq *{transition:none !important}}
+</style>
+
+  <div class="iq-head">
+    <h2 class="iq-title">Test your colonial-era house knowledge</h2>
+    <p class="iq-dek">Seven questions about the features that made early American homes work. Pick an answer to see how you did.</p>
+  </div>
+
+  <div class="iq-body">
+    <div class="iq-play">
+      <div class="iq-meta">
+        <span class="iq-count">Question 1 of 7</span>
+        <div class="iq-bar" aria-hidden="true"><span style="width:0%"></span></div>
+      </div>
+      <h3 class="iq-q"></h3>
+      <ul class="iq-opts"></ul>
+      <div class="iq-feedback" role="status" aria-live="polite" hidden></div>
+      <div class="iq-actions" hidden><button type="button" class="iq-btn iq-next">Next question</button></div>
+    </div>
+
+    <div class="iq-result" hidden>
+      <p class="iq-score"></p>
+      <p class="iq-verdict"></p>
+      <p class="iq-msg"></p>
+      <button type="button" class="iq-btn iq-again">Take the quiz again</button>
+    </div>
+  </div>
+
+<script>
+(function(){
+  var root=document.getElementById("iq-colonial");
+  var QUESTIONS=[
+    {q:"What are shutter dogs?",
+     a:["Small iron dog figurines placed on the windowsill to scare off birds",
+        "Guard dogs trained to bark when someone opened the shutters at night",
+        "Fasteners designed to hold window shutters tight to the wall when open",
+        "Wooden wedges used to keep shutters from rattling in the wind"],
+     c:2,
+     why:"These iron catches, often S-shaped or decorative, swung into place to hold an open shutter against the house so it wouldn’t bang in the wind."},
+    {q:"What were beehive ovens used for?",
+     a:["Keeping hives of bees warm through the winter",
+        "Melting beeswax to make candles",
+        "Drying herbs and smoking fish",
+        "Baking cakes, pies and meats"],
+     c:3,
+     why:"Named for their domed shape, these brick ovens were heated with a fire, then swept out so food could bake in the stored heat. Bread was the everyday staple, along with pies, cakes and meats."},
+    {q:"What is a keeping room?",
+     a:["A small, cozy, informal room just off the kitchen, often with a fireplace",
+        "A locked pantry for storing valuable goods like salt, sugar and spices",
+        "A room where livestock were kept during harsh winters",
+        "A spare bedroom for sick family members to keep them away from the household"],
+     c:0,
+     why:"Warmed by the kitchen hearth, it’s where families gathered, ate and worked. The term still shows up in listings today, especially for farmhouse and Southern-style homes."},
+    {q:"What is a Christian door?",
+     a:["A door painted blue to ward off evil spirits",
+        "A narrow door leading to a home’s private prayer room",
+        "A 6-panel door that resembles a cross and open Bible",
+        "An escape hatch for Christians to avoid persecution"],
+     c:2,
+     why:"The raised panels form a cross in the upper half and what looks like an open book below. Historians consider the religious meaning more legend than design intent, but the nickname stuck."},
+    {q:"What is a scullery?",
+     a:["A storage room for skulls and bones used in folk remedies",
+        "A loft above the kitchen where servants slept",
+        "A cold cellar for storing root vegetables over the winter",
+        "A small room off the kitchen used for messy, water-heavy household chores"],
+     c:3,
+     why:"Dishwashing, pot scrubbing and food prep happened here, keeping the main kitchen cleaner. Its modern descendant is the “messy kitchen” you’ll spot in luxury listings."},
+    {q:"What was a widow’s walk used for?",
+     a:["Putting out rooftop fires caused by nearby chimneys",
+        "Watching for sailor husbands’ ships to return from sea",
+        "Keeping watch for approaching storms",
+        "Giving grieving widows a secluded outdoor space"],
+     c:0,
+     why:"Many of these rooftop platforms gave access to the chimney, so a fire could be doused, often by pouring sand down it. The story of wives watching for ships is mostly romantic legend."},
+    {q:"What is a cupola?",
+     a:["A small cup-shaped dish used to serve sauces and gravy",
+        "A small raised structure on the top of a roof used for ventilation, natural light and architectural detail",
+        "A covered porch built to shelter visitors at the front door",
+        "A built-in cabinet for storing fine china"],
+     c:1,
+     why:"From the Italian for “little cup,” cupolas let hot air escape and light pour in. Today they often top garages and barns, weather vane included."}
+  ];
+  var RESULTS=[
+    {min:7,title:"Master builder",msg:"A perfect score. You could walk a 1750 saltbox blindfolded and still point out the scullery."},
+    {min:5,title:"Historic district pro",msg:"You know your way around an old house. Buyers touring a colonial would be lucky to have you."},
+    {min:3,title:"Solid foundation",msg:"Not bad at all. A few more open houses in the historic part of town and you’ll be an expert."},
+    {min:0,title:"Needs some restoration",msg:"Old houses keep plenty of secrets. Give it another go now that you know a few of them."}
+  ];
+
+  var $=function(s){return root.querySelector(s)};
+  var play=$(".iq-play"),result=$(".iq-result"),qEl=$(".iq-q"),opts=$(".iq-opts"),
+      fb=$(".iq-feedback"),actions=$(".iq-actions"),next=$(".iq-next"),
+      count=$(".iq-count"),bar=$(".iq-bar span");
+  var i=0,score=0;
+
+  function render(){
+    var item=QUESTIONS[i];
+    count.textContent="Question "+(i+1)+" of "+QUESTIONS.length;
+    bar.style.width=(i/QUESTIONS.length*100)+"%";
+    qEl.textContent=item.q;
+    opts.innerHTML="";
+    fb.hidden=true;actions.hidden=true;
+    item.a.forEach(function(text,idx){
+      var li=document.createElement("li");
+      var b=document.createElement("button");
+      b.type="button";b.className="iq-opt";b.textContent=text;
+      var m=document.createElement("span");m.className="iq-mark";m.setAttribute("aria-hidden","true");
+      b.appendChild(m);
+      b.addEventListener("click",function(){choose(idx)});
+      li.appendChild(b);opts.appendChild(li);
+    });
+    next.textContent=i===QUESTIONS.length-1?"See my score":"Next question";
+  }
+
+  function choose(pick){
+    var item=QUESTIONS[i],btns=opts.querySelectorAll(".iq-opt"),right=pick===item.c;
+    if(right)score++;
+    btns.forEach(function(b,idx){
+      b.disabled=true;
+      var mark=b.querySelector(".iq-mark");
+      if(idx===item.c){b.classList.add("is-right");mark.textContent="✓"}
+      else if(idx===pick){b.classList.add("is-wrong");mark.textContent="✗"}
+      else b.classList.add("is-dim");
+    });
+    fb.innerHTML="";
+    var head=document.createElement("strong");
+    head.textContent=right?"Correct!":"Not quite. The answer: "+item.a[item.c].charAt(0).toLowerCase()+item.a[item.c].slice(1)+".";
+    var p=document.createElement("span");p.textContent=item.why;
+    fb.appendChild(head);fb.appendChild(p);
+    fb.hidden=false;actions.hidden=false;
+    bar.style.width=((i+1)/QUESTIONS.length*100)+"%";
+    next.focus({preventScroll:true});
+  }
+
+  function finish(){
+    play.hidden=true;result.hidden=false;
+    var r=RESULTS.filter(function(x){return score>=x.min})[0];
+    $(".iq-score").innerHTML=score+"<small> / "+QUESTIONS.length+"</small>";
+    $(".iq-verdict").textContent=r.title;
+    $(".iq-msg").textContent=r.msg;
+    $(".iq-again").focus({preventScroll:true});
+  }
+
+  next.addEventListener("click",function(){
+    i++;
+    if(i<QUESTIONS.length){render();qEl.setAttribute("tabindex","-1");qEl.focus({preventScroll:true})}
+    else finish();
+  });
+  $(".iq-again").addEventListener("click",function(){
+    i=0;score=0;result.hidden=true;play.hidden=false;render();
+  });
+  render();
+})();
+</script>
+</div>
+
+<script>
+/* Tells the WordPress page how tall the quiz is, so the iframe can resize without scrollbars */
+(function(){
+  function send(){
+    var h=document.documentElement.scrollHeight;
+    parent.postMessage({inmanQuizHeight:h,quiz:"colonial-house"},"*");
+  }
+  if(window.ResizeObserver){new ResizeObserver(send).observe(document.body)}
+  window.addEventListener("load",send);
+  document.addEventListener("click",function(){setTimeout(send,50)});
+})();
+</script>
+</body>
+</html>
